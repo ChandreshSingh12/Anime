@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Anime & Manga Explorer 🎭</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <div class="container">
+        <header>
+            <h1>🎭 Anime & Manga Explorer</h1>
+            <p>Discover your next favorite anime or manga!</p>
+        </header>
+
+        <div class="search-section">
+            <div class="search-container">
+                <input type="text" id="searchInput" placeholder="Search anime or manga...">
+                <button id="searchBtn">Search</button>
+                <button id="randomBtn">🎲 Random Anime</button>
+                <label style="display: flex; align-items: center; gap: 5px;">
+                    <input type="checkbox" id="translateSwitch">
+                    <span>Translate to English</span>
+                </label>
+            </div>
+            
+            <div class="filters">
+                <select id="genreFilter">
+                    <option value="">All Genres</option>
+                    <option value="Action">Action</option>
+                    <option value="Adventure">Adventure</option>
+                    <option value="Comedy">Comedy</option>
+                    <option value="Drama">Drama</option>
+                    <option value="Fantasy">Fantasy</option>
+                    <option value="Romance">Romance</option>
+                    <option value="Sci-Fi">Sci-Fi</option>
+                    <option value="Slice of Life">Slice of Life</option>
+                </select>
+                
+                <select id="yearFilter">
+                    <option value="">All Years</option>
+                    <option value="2024">2024</option>
+                    <option value="2023">2023</option>
+                    <option value="2022">2022</option>
+                    <option value="2021">2021</option>
+                    <option value="2020">2020</option>
+                </select>
+                
+                <select id="typeFilter">
+                    <option value="">All Types</option>
+                    <option value="anime">Anime</option>
+                    <option value="manga">Manga</option>
+                </select>
+            </div>
+        </div>
+
+        <div class="tabs">
+            <button class="tab-btn active" data-tab="search">Search Results</button>
+            <button class="tab-btn" data-tab="trending">Trending</button>
+            <button class="tab-btn" data-tab="seasonal">Seasonal</button>
+            <button class="tab-btn" data-tab="favorites">Favorites</button>
+        </div>
+
+        <div class="loading" id="loading" style="display: none;">
+            <div class="loader"></div>
+            <p>Loading...</p>
+        </div>
+
+        <div class="content">
+            <div id="search-content" class="tab-content active">
+                <div id="searchResults" class="results-grid"></div>
+            </div>
+            
+            <div id="trending-content" class="tab-content">
+                <div id="trendingResults" class="results-grid"></div>
+            </div>
+            
+            <div id="seasonal-content" class="tab-content">
+                <div id="seasonalResults" class="results-grid"></div>
+            </div>
+            
+            <div id="favorites-content" class="tab-content">
+                <div id="favoritesResults" class="results-grid"></div>
+            </div>
+        </div>
+    </div>
+
+    <script src="script.js"></script>
+</body>
+</html>
